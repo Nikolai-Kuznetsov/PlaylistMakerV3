@@ -79,7 +79,7 @@ class SearchActivity : AppCompatActivity() {
             Track(
                 trackName = "Whole Lotta Love",
                 artistNameAndTime = "Led Zeppelin · 5:33",
-                artworkUrl100 = "https://is4-ssl.mzstatic.com/image/thumb/Music115/v4/1f/80/1f/1f801fc1-8c0f-ea3e-d3e5-387c6619619e/16UMGIM86640.rgb.jpg/100x100bb.jpg"
+                artworkUrl100 = "https://is2-ssl.mzstatic.com/image/thumb/Music62/v4/7e/17/e3/7e17e33f-2efa-2a36-e916-7f808576cf6b/mzm.fyigqcbs.jpg/100x100bb.jpg"
             ),
             Track(
                 trackName = "Sweet Child O'Mine",
