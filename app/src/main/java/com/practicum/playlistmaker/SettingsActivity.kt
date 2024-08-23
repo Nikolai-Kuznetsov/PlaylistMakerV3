@@ -89,7 +89,7 @@ class SettingsActivity : AppCompatActivity() {
             else AppCompatDelegate.MODE_NIGHT_NO
         )
         sharedPreferences.edit().putBoolean("dark_mode", checked).apply()
-        recreate() // Перезагрузка активности, чтобы изменения вступили в силу
+        recreate()
     }
 
     private fun isDarkMode(): Boolean {
