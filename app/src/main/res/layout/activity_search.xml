@@ -49,4 +49,11 @@
             android:visibility="gone" />
     </FrameLayout>
 
-</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/trackList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+

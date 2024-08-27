@@ -19,5 +19,6 @@
     <string name="terms_of_use">Пользовательское соглашение</string>
     <string name="terms_of_use_url">https://yandex.ru/legal/practicum_offer/</string>
     <string name="no_browser">У вас не установлен браузер:(\n\nУстановите любой браузер, чтобы прочитать пользовательское соглашение.</string>
+    <string name="album_cover">Album cover</string>
 
 </resources>
