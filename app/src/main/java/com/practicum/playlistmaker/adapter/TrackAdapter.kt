@@ -1,12 +1,15 @@
-package com.practicum.playlistmaker
+package com.practicum.playlistmaker.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.Recycler
+import com.practicum.playlistmaker.R
+import com.practicum.playlistmaker.SearchViewHolder
+import com.practicum.playlistmaker.dto.SongDTO
 
 class TrackAdapter (
-    private val tracks: List<Track>
+    private var tracks: List<SongDTO>
 ) : RecyclerView.Adapter<SearchViewHolder> () {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchViewHolder {
@@ -18,6 +21,12 @@ class TrackAdapter (
 
     override fun onBindViewHolder(holder: SearchViewHolder, position: Int) {
         holder.bind(tracks[position])
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateItems(newItems: List<SongDTO>) {
+        tracks = newItems
+        notifyDataSetChanged()
     }
 
 }

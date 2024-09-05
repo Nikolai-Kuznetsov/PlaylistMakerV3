@@ -1,5 +1,6 @@
 package com.practicum.playlistmaker;
 
+import android.annotation.SuppressLint
 import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
 import android.widget.ImageView;
@@ -8,6 +9,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import com.practicum.playlistmaker.dto.SongDTO
+import com.practicum.playlistmaker.utils.TimeFormatter
 
 
 class SearchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -22,9 +25,10 @@ class SearchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         artworkUrl100View = itemView.findViewById(R.id.cover)
     }
 
-    fun bind(model: Track) {
+    @SuppressLint("SetTextI18n")
+    fun bind(model: SongDTO) {
         trackNameView.text = model.trackName
-        artistNameAndTimeView.text = model.artistNameAndTime
+        artistNameAndTimeView.text = model.artistName + " · " + TimeFormatter.convertTime(model.trackTimeMillis)
 
         val requestOptions = RequestOptions()
             .placeholder(R.drawable.placeholder_image)
